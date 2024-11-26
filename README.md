@@ -1,13 +1,13 @@
-# dagsterpipe
+# Financial Data Pipeline
 
-This is a pipeline project using [Dagster](https://dagster.io/).
+This is a pipeline project using [Dagster](https://dagster.io/) and [dbt](https://www.getdbt.com/).
 
 ## Getting started
 
 First, create a virtual environment and activate it:
 
 ```bash
-python3 -m venv dagsterpipe-venv
+python3 -m venv
 source dagster-venv/bin/activate
 ```
 
@@ -22,7 +22,7 @@ poetry install
 Then, start the Dagster UI web server:
 
 ```bash
-dagster dev
+poetry run dagster dev
 ```
 
 Open http://localhost:3000 with your browser to see the project.
