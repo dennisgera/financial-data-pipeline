@@ -1,0 +1,37 @@
+---
+version: 2
+
+sources:
+  - name: alphavantage
+    schema: raw_alphavantage
+    loader: dagster
+
+    tags:
+      - financial_market_data
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+    tables:
+      - name: daily_stock_prices
+        columns:
+          - name: date
+            data_type: text
+          - name: open
+            data_type: double precision
+          - name: high
+            data_type: double precision
+          - name: low
+            data_type: double precision
+          - name: close
+            data_type: double precision
+          - name: volume
+            data_type: bigint
+          - name: symbol
+            data_type: text
+          - name: last_refreshed
+            data_type: text
+          - name: loaded_at
+            data_type: timestamp with time zone

@@ -27,4 +27,4 @@ dbt_dagsterpipe:
       user: postgres
       pass: ""
       dbname: warehouse
-      schema: analytics
+      schema: "{{ env_var('USER', 'john_doe') }}"

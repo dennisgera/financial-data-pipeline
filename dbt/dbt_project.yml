@@ -31,6 +31,20 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_dagsterpipe:
+    +persist_docs:
+      relation: true
+      columns: true
+    +dbt-osmosis: schema/{model}.yml
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    marts:
+      +materialized: table
+    staging:
+      +unlogged: true # https://docs.getdbt.com/reference/resource-configs/postgres-configs#unlogged
+      +tags: [staging]
+      +materialized: table
+      +on_schema_change: sync_all_columns
+      alphavantage:
+        +schema: alphavantage
+        +meta:
+          dagster:
+            group: alphavantage
