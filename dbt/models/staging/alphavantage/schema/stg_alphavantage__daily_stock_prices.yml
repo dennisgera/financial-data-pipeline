@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: stg_alphavantage__daily_stock_prices
+    columns:
+      - name: date
+        description: ''
+        data_type: date
+      - name: open
+        description: ''
+        data_type: numeric
+      - name: high
+        description: ''
+        data_type: numeric
+      - name: low
+        description: ''
+        data_type: numeric
+      - name: close
+        description: ''
+        data_type: numeric
+      - name: volume
+        description: ''
+        data_type: numeric
+      - name: symbol
+        description: ''
+        data_type: text
+      - name: last_refreshed
+        description: ''
+        data_type: date
+      - name: loaded_at
+        description: ''
+        data_type: timestamp with time zone

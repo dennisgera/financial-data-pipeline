@@ -1,0 +1,58 @@
+version: 2
+models:
+  - name: daily_stock_metrics
+    columns:
+      - name: trading_date
+        description: ''
+        data_type: date
+      - name: symbol
+        description: ''
+        data_type: text
+      - name: open
+        description: ''
+        data_type: numeric
+      - name: high
+        description: ''
+        data_type: numeric
+      - name: low
+        description: ''
+        data_type: numeric
+      - name: close
+        description: ''
+        data_type: numeric
+      - name: volume
+        description: ''
+        data_type: numeric
+      - name: daily_price_change
+        description: ''
+        data_type: numeric
+      - name: daily_price_change_pct
+        description: ''
+        data_type: numeric
+      - name: daily_price_range
+        description: ''
+        data_type: numeric
+      - name: daily_volatility_pct
+        description: ''
+        data_type: numeric
+      - name: daily_volume
+        description: ''
+        data_type: numeric
+      - name: daily_trend
+        description: ''
+        data_type: text
+      - name: moving_avg_5d
+        description: ''
+        data_type: numeric
+      - name: moving_avg_20d
+        description: ''
+        data_type: numeric
+      - name: relative_volume_5d
+        description: ''
+        data_type: numeric
+      - name: is_trading_holiday
+        description: ''
+        data_type: boolean
+      - name: model_last_refreshed
+        description: ''
+        data_type: timestamp with time zone
